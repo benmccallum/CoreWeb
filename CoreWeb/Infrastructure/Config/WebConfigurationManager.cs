@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Configuration;
 using System.Globalization;
-using CoreSystemEx.Infrastructure.Config;
 
-namespace CoreWebEx.Infrastructure.Config
+namespace CoreWeb.Infrastructure.Config
 {
     /// <summary>
     /// 
     /// </summary>
-    public interface IWebConfigurationManager : IConfigurationManager
+    public interface IWebConfigurationManager : CoreSystem.Infrastructure.Config.IConfigurationManager
     {
         
     }
@@ -16,7 +15,7 @@ namespace CoreWebEx.Infrastructure.Config
     /// <summary>
     /// Configuration manager wrapping WebConfigurationManager.
     /// </summary>
-    public class WebConfigurationManager : CoreSystemEx.Infrastructure.Config.ConfigurationManager, IWebConfigurationManager
+    public class WebConfigurationManager : CoreSystem.Infrastructure.Config.ConfigurationManager, IWebConfigurationManager
     {
         public override string GetAppSetting(string key)
         {
