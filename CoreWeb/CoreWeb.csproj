@@ -53,6 +53,7 @@
     <Compile Include="Helpers\InlineFormValidator.cs" />
     <Compile Include="Helpers\MailHelper.cs" />
     <Compile Include="Helpers\UrlHelper.cs" />
+    <Compile Include="Infrastructure\Config\WebConfigurationManager.cs" />
     <Compile Include="Sys\Web\UI\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

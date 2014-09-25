@@ -1,9 +1,9 @@
-using System.IO;
+﻿using System.IO;
 using System.Web;
 using System.Web.Caching;
 using System.Web.Hosting;
 
-namespace CoreWeb.Helpers
+namespace CoreWebEx.Helpers
 {
     /// <summary>
     /// Fingerprinter for files.
@@ -14,7 +14,8 @@ namespace CoreWeb.Helpers
     public class Fingerprint
     {
         /// <summary>
-        /// Re-build a file path by injecting the file's write timestamp into the 
+        /// Re-build a file name by appending the file's write timestamp before the file extension.
+        /// This will give it a unique name to the browser for cache busting and will be resolved using url rewriting to the correct physical file.
         /// </summary>
         /// <param name="rootRelativePath">Root relative path to file resource.</param>
         /// <returns>Rewritten file name with versioning in it.</returns>
@@ -29,9 +30,9 @@ namespace CoreWeb.Helpers
                 }
 
                 var date = File.GetLastWriteTimeUtc(absolute);
-                var index = rootRelativePath.LastIndexOf('/');
+                var index = rootRelativePath.LastIndexOf('.');
 
-                var result = rootRelativePath.Insert(index, "/v-" + date.Ticks);
+                var result = rootRelativePath.Insert(index, "-ver-" + date.Ticks);
                 HttpRuntime.Cache.Insert(rootRelativePath, result, new CacheDependency(absolute));
             }
 
