@@ -34,14 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CoreSystem, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\CoreSystem.1.0.3.0\lib\net45\CoreSystem.dll</HintPath>
+    <Reference Include="CoreSystem">
+      <HintPath>..\packages\CoreSystem.1.0.5.0\lib\net45\CoreSystem.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Xml" />
@@ -69,10 +69,13 @@
     <Compile Include="Sys\Web\UI\WebControls\DataPlaceHolder.cs" />
     <Compile Include="Sys\Web\UI\WebControls\FormLabel.cs" />
     <Compile Include="Sys\Web\UI\WebControls\FormPanel.cs" />
+    <Compile Include="Sys\Web\UI\WebControls\HyperLinkExtensions.cs" />
     <Compile Include="Sys\Web\UI\WebControls\ListControlExtensions.cs" />
     <Compile Include="Sys\Web\UI\WebControls\ListItemCollectionExtensions.cs" />
+    <Compile Include="Sys\Web\UI\WebControls\ListViewExtensions.cs" />
     <Compile Include="Sys\Web\UI\WebControls\MultiFieldCustomValidator.cs" />
     <Compile Include="Sys\Web\UI\WebControls\RepeaterExtensions.cs" />
+    <Compile Include="Sys\Web\UI\WebControls\RepeaterItemEventArgsExtensions.cs" />
     <Compile Include="Sys\Web\UI\WebControls\WebControlExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
