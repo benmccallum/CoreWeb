@@ -5,20 +5,29 @@ using System.Web.UI;
 
 namespace CoreWeb.Helpers
 {
+    /// <summary>
+    /// Helper for web controls and pages.
+    /// </summary>
     public class ControlHelper
     {
-        public static T LoadControl<T>(Page page, String controlPath) where T : Control
+        public static T LoadControl<T>(Page page, String controlPath)
+            where T : Control
         {
-            Control result = page.LoadControl(controlPath);
-            return result as T;
+            return page.LoadControl(controlPath) as T;
         }
-
-        public static String Render(Control control)
+        
+        /// <summary>
+        /// Renders an instantiated <see cref="Control"/> into it's HTML output.
+        /// </summary>
+        /// <param name="control"></param>
+        /// <returns></returns>
+        /// <remarks>Super useful if you want to then return this in an AJAX call or something similar.</remarks>
+        public static string Render(Control control)
         {
-            StringBuilder sb = new StringBuilder();
-            using (StringWriter tw = new StringWriter(sb))
+            var sb = new StringBuilder();
+            using (var tw = new StringWriter(sb))
             {
-                using (HtmlTextWriter hw = new HtmlTextWriter(tw))
+                using (var hw = new HtmlTextWriter(tw))
                 {
                     control.RenderControl(hw);
                     return sb.ToString();

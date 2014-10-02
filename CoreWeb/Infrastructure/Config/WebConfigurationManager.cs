@@ -1,11 +1,9 @@
-﻿using System;
-using System.Configuration;
-using System.Globalization;
+﻿using System.Configuration;
 
 namespace CoreWeb.Infrastructure.Config
 {
     /// <summary>
-    /// 
+    /// Interface for a configuraiton manager wrapping the <see cref="WebConfigurationManager"/>.
     /// </summary>
     public interface IWebConfigurationManager : CoreSystem.Infrastructure.Config.IConfigurationManager
     {
@@ -13,7 +11,7 @@ namespace CoreWeb.Infrastructure.Config
     }
 
     /// <summary>
-    /// Configuration manager wrapping WebConfigurationManager.
+    /// Configuration manager wrapping the <see cref="WebConfigurationManager"/>.
     /// </summary>
     public class WebConfigurationManager : CoreSystem.Infrastructure.Config.ConfigurationManager, IWebConfigurationManager
     {

@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CoreWeb.Sys.Web.UI.Web.WebControls
+namespace CoreWeb.Sys.Web.UI.WebControls
 {
     /// <summary>
     /// A custom control that inherits from panel and overloads the 
