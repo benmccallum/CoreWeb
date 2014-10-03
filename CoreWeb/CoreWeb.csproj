@@ -71,6 +71,7 @@
     <Compile Include="Sys\Web\UI\WebControls\FormLabel.cs" />
     <Compile Include="Sys\Web\UI\WebControls\FormPanel.cs" />
     <Compile Include="Sys\Web\UI\WebControls\HyperLinkExtensions.cs" />
+    <Compile Include="Sys\Web\UI\WebControls\HyperLinkHelper.cs" />
     <Compile Include="Sys\Web\UI\WebControls\ListControlExtensions.cs" />
     <Compile Include="Sys\Web\UI\WebControls\ListItemCollectionExtensions.cs" />
     <Compile Include="Sys\Web\UI\WebControls\ListViewExtensions.cs" />
