@@ -30,7 +30,14 @@ namespace CoreWeb.Helpers
             }
 
             var cacheKeyBuilder = new StringBuilder(100);
-            cacheKeyBuilder.Append("|Repository:" + methodCallExpression.Method.DeclaringType.FullName + "|Method:" + methodCallExpression.Method.Name + "|Args");
+            cacheKeyBuilder.Append("|Repository:" + methodCallExpression.Method.DeclaringType.FullName + "|Method:" + methodCallExpression.Method.Name);
+            
+            var genericArguments = methodCallExpression.Method.GetGenericArguments();
+            if (!genericArguments.IsNullOrEmpty())
+            {
+                cacheKeyBuilder.Append("|GenericArguments:" + String.Join<System.Type>(",", genericArguments));
+            }
+            cacheKeyBuilder.Append("|Args");
 
             foreach (var arg in methodCallExpression.Arguments)
             {
