@@ -34,8 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CoreSystem">
-      <HintPath>..\packages\CoreSystem.1.0.5.0\lib\net45\CoreSystem.dll</HintPath>
+    <Reference Include="CoreSystem, Version=1.0.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CoreSystem.1.0.13.0\lib\net45\CoreSystem.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -51,6 +52,7 @@
     <Compile Include="Helpers\CacheManager.cs" />
     <Compile Include="Helpers\ControlHelper.cs" />
     <Compile Include="Helpers\CookieHelper.cs" />
+    <Compile Include="Helpers\EncryptionHelper.cs" />
     <Compile Include="Helpers\Fingerprint.cs" />
     <Compile Include="Helpers\InlineFormValidator.cs" />
     <Compile Include="Helpers\MailHelper.cs" />
