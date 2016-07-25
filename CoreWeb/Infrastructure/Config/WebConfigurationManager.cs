@@ -7,7 +7,7 @@ namespace CoreWeb.Infrastructure.Config
     /// </summary>
     public interface IWebConfigurationManager : CoreSystem.Infrastructure.Config.IConfigurationManager
     {
-        
+
     }
 
     /// <summary>

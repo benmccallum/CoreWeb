@@ -3,7 +3,7 @@ using System.Web;
 using System.Web.Caching;
 using System.Web.Hosting;
 
-namespace CoreWebEx.Helpers
+namespace CoreWeb.Helpers
 {
     /// <summary>
     /// Fingerprinter for files.
